@@ -16,14 +16,16 @@ interactive scatter plot with non-overlapping term labels. Exploratory data anal
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/scattertext-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/scattertext-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/scattertext-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/scattertext-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/scattertext-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/scattertext-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/scattertext-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/scattertext-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/scattertext-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/scattertext-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/scattertext-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/scattertext-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/scattertext/badges/version.svg)](https://anaconda.org/conda-forge/scattertext)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/scattertext/badges/downloads.svg)](https://anaconda.org/conda-forge/scattertext)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-scattertext-green.svg)](https://anaconda.org/conda-forge/scattertext) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/scattertext.svg)](https://anaconda.org/conda-forge/scattertext) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/scattertext.svg)](https://anaconda.org/conda-forge/scattertext) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/scattertext.svg)](https://anaconda.org/conda-forge/scattertext) |
 
 Installing scattertext
 ======================
