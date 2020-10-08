@@ -11,15 +11,15 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
-  skip: true  # [win32]
+  number: 1
+  noarch: python
+  script: "{{ PYTHON }} -m pip install . -vv"
   entry_points:
     - scattertext = scattertext.CLI:main
 
 
 requirements:
-  build:
+  host:
     - python
     - pip
   run:
@@ -28,11 +28,10 @@ requirements:
     - scipy
     - scikit-learn
     - pandas
-    - spacy
-    - jieba
-    - empath
-    - gensim
-    - future
+    - six
+    - mock
+    - statsmodels
+    - flashtext
 
 test:
   imports:
