@@ -5,9 +5,11 @@ Home: https://github.com/JasonKessler/scattertext
 
 Package license: Apache-2.0
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/scattertext-feedstock/blob/master/LICENSE.txt)
 
 Summary: Beautiful visualizations of how language differs among document types
+
+Development: https://github.com/JasonKessler/scattertext
 
 A tool for finding distinguishing terms in small-to-medium-sized corpora, and presenting them in a sexy,
 interactive scatter plot with non-overlapping term labels. Exploratory data analysis just got more fun.
