@@ -1,6 +1,6 @@
 {% set name = "scattertext" %}
-{% set version = "0.0.2.69" %}
-{% set sha256 = "1d276abf2f75e1cce64b84cb8d6a9af6576d4b9bee7b2b0539dc66b484787fc2" %}
+{% set version = "0.0.2.70" %}
+{% set sha256 = "7df605b618c569efd21401212f6d77d894eef8723dbb76e6145354b1aabff54c" %}
 
 package:
   name: {{ name|lower }}
@@ -11,9 +11,9 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - scattertext = scattertext.CLI:main
 
