@@ -1,6 +1,6 @@
 {% set name = "scattertext" %}
-{% set version = "0.0.2.75" %}
-{% set sha256 = "f88f5e1d35946b2ce2a204fbbbc7754ac9db34e104f4508717d4533dc405a451" %}
+{% set version = "0.1.0.0" %}
+{% set sha256 = "0331f5cb255902170cf5703d25d03fd85b9dd342c4ad5889349fe9b8c8ab5bcb" %}
 
 package:
   name: {{ name|lower }}
