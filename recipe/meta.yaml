@@ -33,12 +33,16 @@ requirements:
     - statsmodels
     - flashtext
     - gensim >=4.0
+    - spacy
 
 test:
   imports:
     - scattertext
+  requires:
+    - pip
   commands:
     - scattertext -h
+    - pip check
 
 about:
   home: https://github.com/JasonKessler/scattertext
