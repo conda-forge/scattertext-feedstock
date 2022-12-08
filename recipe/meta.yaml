@@ -28,12 +28,10 @@ requirements:
     - scipy
     - scikit-learn
     - pandas
-    - six
-    - mock
     - statsmodels
     - flashtext
     - gensim >=4.0
-    - spacy
+    - spacy >=3.2
 
 test:
   imports:
