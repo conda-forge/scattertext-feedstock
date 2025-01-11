@@ -7,11 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
@@ -20,10 +20,10 @@ build:
 
 requirements:
   host:
-    - python >=3.4
+    - python {{ python_min }}
     - pip
   run:
-    - python >=3.4
+    - python >={{ python_min }}
     - numpy
     - scipy
     - scikit-learn
@@ -38,6 +38,7 @@ test:
     - scattertext
   requires:
     - pip
+    - python {{ python_min }}
   commands:
     - scattertext -h
     - pip check
