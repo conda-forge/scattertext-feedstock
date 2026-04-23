@@ -1,55 +1,56 @@
 {% set name = "scattertext" %}
-{% set version = "0.1.10" %}
-{% set sha256 = "dd283a69c5aa6a4a04927bfb30343cd7db51a8885314abadc6622b5a638a094e" %}
+{% set version = "0.2.2" %}
+{% set python_min = "3.11" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/scattertext-{{ version }}.tar.gz
+  sha256: 5f02aed2e7e2c6adc73fff36557a71fbbbd4c585c48b6f61105913cf2b5af294
 
 build:
-  number: 0
-  noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - scattertext = scattertext.CLI:main
-
+  noarch: python
+  script: {{ PYTHON }} -m pip install . -vv
+  number: 0
 
 requirements:
   host:
-    - python >=3.4
+    - python {{ python_min }}
     - pip
+    - setuptools
   run:
-    - python >=3.4
-    - numpy
-    - scipy
-    - scikit-learn
-    - pandas
-    - statsmodels
-    - flashtext
-    - gensim >=4.0
+    - python >={{ python_min }}
+    - numpy >=1.2.6
+    - scipy <1.14.0,>=1.7.0
+    - scikit-learn >=1.4
+    - pandas >=2.0.0
+    - statsmodels >=0.14.1
+    - flashtext >=2.7
+    - gensim >=4.0.0
     - spacy >=3.2
+    - tqdm >=4.0
 
 test:
   imports:
     - scattertext
+  commands:
+    - pip check
+    - scattertext --help
   requires:
     - pip
-  commands:
-    - scattertext -h
-    - pip check
+    - python {{ python_min }}
 
 about:
   home: https://github.com/JasonKessler/scattertext
+  summary: An NLP package to visualize interesting terms in text.
   license: Apache-2.0
   license_file: LICENSE
-  summary: Beautiful visualizations of how language differs among document types
-
   description: |
-    A tool for finding distinguishing terms in small-to-medium-sized corpora, and presenting them in a sexy, 
+    A tool for finding distinguishing terms in small-to-medium-sized corpora, and presenting them in a sexy,
     interactive scatter plot with non-overlapping term labels. Exploratory data analysis just got more fun.
   dev_url: https://github.com/JasonKessler/scattertext
 
